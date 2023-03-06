@@ -1,0 +1,35 @@
+@import "./../helpers/scss/main";
+@import "./../helpers/scss/colors";
+
+.menuItem {
+  width: 200px !important;
+
+  @media screen and (max-width: 768px) {
+    width: calc(100vw - ($mainSpace * 4)) !important;
+    padding: $mainSpace $mainSpace * 4 !important;
+
+    &:first-of-type {
+      justify-content: right;
+      padding-right: 0 !important;
+    }
+  }
+}
+
+.backButton {
+  margin: $mainSpace;
+  cursor: pointer;
+}
+
+.divider {
+  background-color: $sDark;
+}
+
+.sidebar {
+  padding: $mainSpace;
+  cursor: pointer;
+  display: flex;
+
+  .toggle {
+    color: $pText;
+  }
+}

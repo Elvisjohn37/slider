@@ -1,0 +1,55 @@
+@import "./../helpers/scss/main";
+@import "./../helpers/scss/colors";
+
+.tips {
+  @include primary;
+  padding: $mainSpace * 5 $mainSpace * 40;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .title {
+      font-size: 30px;
+      padding: $mainSpace;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+
+    .list1,
+    .list2 {
+      padding: $mainSpace * 4;
+      padding-top: 0;
+      margin: 0 $mainSpace * 2;
+      max-width: 360px;
+
+      .item {
+        padding: $mainSpace;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: $mainSpace;
+
+    .header {
+      .title {
+        font-size: 20px;
+        padding: $mainSpace 0;
+      }
+    }
+
+    .content {
+      flex-direction: column;
+      .list1,
+      .list2 {
+        padding: 0;
+        max-width: unset;
+      }
+    }
+  }
+}

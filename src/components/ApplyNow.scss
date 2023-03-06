@@ -1,0 +1,61 @@
+@import "./../helpers/scss/main";
+@import "./../helpers/scss/colors";
+
+.applyNow {
+  height: 335px;
+  background: url("/assets/images/black.svg");
+  background-size: cover;
+  position: relative;
+  display: flex;
+  place-content: center;
+  justify-content: center;
+
+  .blackImage {
+    width: 100%;
+    display: block;
+  }
+
+  .contents {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 200px;
+
+    .applyNowButton {
+      .button {
+        background-color: $accent;
+        color: darken($sDark, 100%);
+        padding: $mainSpace $mainSpace * 4;
+      }
+    }
+
+    .applyNowButton,
+    .productReview,
+    .googleReview {
+      display: flex;
+      align-self: center;
+      padding: $mainSpace;
+      color: $sText;
+    }
+  }
+
+  .personImage {
+    bottom: 0px;
+    width: 382px;
+    place-self: flex-end;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 523px;
+    flex-direction: column-reverse;
+
+    .contents {
+      padding: 0;
+      flex-direction: column;
+    }
+
+    .personImage {
+      margin-top: -515px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "./../helpers/scss/main";
+@import "./../helpers/scss/colors";
+
+.slider {
+  padding: $mainSpace * 4 $mainSpace $mainSpace;
+
+  .muiSlider {
+    color: $accent;
+  }
+
+  .labels {
+    display: flex;
+    justify-content: space-between;
+    color: $pText;
+  }
+}

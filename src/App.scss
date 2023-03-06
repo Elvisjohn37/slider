@@ -1,0 +1,38 @@
+@import "./helpers/scss/main";
+@import "./helpers/scss/colors";
+
+$sliderWidth: 400px;
+
+.app {
+  background-color: $primary;
+  .appSliders {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+
+    .inputs {
+      padding: $mainSpace * 2;
+      width: $sliderWidth;
+    }
+
+    .appOutputs {
+      padding: 90px $mainSpace * 4;
+      border-radius: $mainBorderRadius;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      margin-top: 70px;
+
+      .inputs {
+        width: 100%;
+      }
+
+      .appOutputs {
+        padding: $mainSpace;
+      }
+    }
+  }
+}

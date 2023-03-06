@@ -1,0 +1,26 @@
+$primary: #00d1d0;
+$pLight: #aaece9;
+$pDark: #00bdc5;
+
+$secondary: #f0f0f0;
+$sLight: #fafafa;
+$sDark: #454545;
+
+$accent: #04ff80;
+$pText: $sLight;
+$sText: $pLight;
+
+@mixin primary($opacity: 1) {
+  background-color: rgba($primary, $opacity);
+  color: $pText;
+}
+
+@mixin secondary($opacity: 1) {
+  background-color: rgba($secondary, $opacity);
+  color: $sText;
+}
+
+@mixin sDark($opacity: 1) {
+  background-color: rgba($sDark, $opacity);
+  color: $sText;
+}

@@ -1,0 +1,31 @@
+@import "./../helpers/scss/main";
+@import "./../helpers/scss/colors";
+
+.outputs {
+  display: flex;
+  place-self: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  @include sDark(0.2);
+  text-align: center;
+
+  span {
+    color: $sLight;
+    font-size: 30px;
+  }
+
+  label {
+    padding: $mainSpace $mainSpace * 8;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+    padding: $mainSpace;
+
+    label {
+      padding: $mainSpace * 4 $mainSpace;
+    }
+  }
+}

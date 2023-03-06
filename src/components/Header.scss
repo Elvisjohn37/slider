@@ -1,0 +1,54 @@
+@import "./../helpers/scss/colors";
+@import "./../helpers/scss/main";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: $mainSpace * 7;
+  position: relative;
+  font-family: sans-serif;
+
+  .logo {
+    margin-left: $mainSpace * 10;
+    color: $pText;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .navigation {
+    margin-right: $mainSpace * 10;
+    display: flex;
+    align-items: center;
+
+    .login {
+      color: $sLight;
+      border: 1px solid $sLight;
+    }
+  }
+
+  h1 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: $pText;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+
+    .navigation {
+      margin: $mainSpace * 2;
+    }
+    .logo {
+      margin: $mainSpace * 2;
+    }
+
+    h1 {
+      top: 80px;
+      font-size: 26px;
+      white-space: break-spaces;
+    }
+  }
+}
